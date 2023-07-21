@@ -1,0 +1,67 @@
+<script setup>
+import { ref } from 'vue'
+
+const msg = "<h2>Hello World</h2>"
+const link = "https://www.youtube.com/"
+
+let a = 10
+let b = 5
+let c = a + b
+let message = ref("Hai Vue JS");
+
+let pesan = ref("Hai Vue");
+
+let data = [
+  { nama :' Septian ',  kelas : 'RPL 1' ,  alamat : 'Bandung' ,  jenis_kelamin : ' Laki-Laki' },
+  { nama :'Andika ' ,  kelas : 'RPL 2' ,  alamat : 'Bandung' ,  jenis_kelamin : ' Laki-Laki' },
+  { nama :' Dimas ' ,  kelas : 'RPL 3' ,  alamat : 'Bandung;',  jenis_kelamin : ' Laki-Laki' },
+  { nama :'Ikbal ' ,  kelas : 'RPL 4' ,  alamat : 'Bandung' ,  jenis_kelamin : ' Laki-Laki' },
+  { nama :'Fauzi ' ,  kelas : 'RPL 5' ,  alamat : 'Bandung' ,  jenis_kelamin : ' Laki-Laki' },
+
+
+]
+
+
+</script>
+
+<template>
+  <div >
+    <span>{{ message }}</span> <br>
+    <span v-html="msg"></span> <!--menggunakan HTML yg ada di dalam variabel -->
+    <span>{{ mesage }}</span>
+    <a v-bind:href="link">youtube</a> <!--menggunakan atribut HTML ke VUE JS menggunakan v-bind-->
+    <br>
+  <button v-bind:disabled="IsButtonDisabble">Button</button>
+
+  <br>
+ {{ c }}
+  <br>
+
+  <p>{{ pesan }}</p>
+  <input v-model="pesan">
+
+  <br>
+  <!--Table-->
+  <table border="1" cellpadding="5">
+    <tr>
+      
+      <td>Nama</td>
+      <td>Kelas</td>
+      <td>Alamat</td>
+      <td>Jenis Kelamin</td>
+    </tr>
+
+   <tr v-for="siswa in data">
+  <td> {{ siswa.nama }} </td>
+  <td> {{ siswa.kelas }} </td>
+  <td> {{ siswa.alamat }} </td>
+  <td> {{ siswa.jenis_kelamin }} </td>
+
+     
+   </tr>
+   
+  </table>
+  
+  </div> 
+
+</template>
