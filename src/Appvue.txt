@@ -65,3 +65,4 @@ let data = [
   </div> 
 
 </template>
+https://olipiskandar.notion.site/Komponen-Vue-188799c33e844c828c9efcd7a10920ab
